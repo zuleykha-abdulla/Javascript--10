@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT-10</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./img/logo5.webp" alt="" />
+      </div>
+      <!---navbar statr-->
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Cookies</a></li>
+          <li><a href="local.html">LocalStorage obyekti </a></li>
+          <li><a href="format.html"> Json formatı </a></li>
+        </ul>
+      </nav>
+      <!---navbar finished-->
+      <!-----kecid menyusu -->
+
+      <div id="menu-toggle">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+      <!------------------------ -->
+    </header>
+    <main>
+      <section>
+        <div class="format">
+          <h1>Json (JavaScript Object Notation)</h1>
+          <p>
+            Müxtəlif sistemlər arasında çox sayda məlumat göndərilərkən xüsusi
+            bir formatda göndərilməyə ehtiyac duyulur. Bu format elə olmalıdır
+            ki, məlumatlar rahat şəkildə oxuna və istifadə oluna bilsin. Bunun
+            üçün mövcud olan formatlardan biri <span>JSON formatıdır</span>.
+            <span>Json formatının</span>
+            yazılışı aşağıdakı şəkildədir:
+          </p>
+        </div>
+        <p id="qutu1"></p>
+
+        <div class="pre-div">
+          <pre>{"ad":"Orxan", "soyad":"Abdullayev"}</pre>
+          <p>
+            müxtəlif məlumatlar bir-birindən vergüllə ayrılır. İlk olaraq dırnaq
+            arasında məlumatın adı, sonra isə “:” simvolu qoyularaq məlumatın
+            özü yazılır. Yazılar dırnaq arasında yazılsa da ədədləri dırnaq
+            arasında yazmasaq da olar.
+          </p>
+          <pre>
+{"ad":"Orxan", "soyad":"Abdullayev", "yas":39}
+          </pre>
+        </div>
+
+        <div class="parse-info">
+          <p>
+            <span>JSON Javascript obyektlərini</span> mətn kimi saxlamağa imkan
+            verir. Json mətni asanlıqla Javascript obyektinə dönüşdürülərək
+            obyekt şəklində istifadə oluna bilər. Bunun üçün
+            <span>JSON.parse() funksiyasından</span>
+            istifadə edə bilərik.
+          </p>
+        </div>
+        <div class="pre-div">
+          <pre>
+            var x=`{"ad":"Orxan", "soyad":"Abdullayev", "yas":39}`;
+var y=JSON.parse(x);
+console.log(y);
+document.write(y.ad);
+
+          </pre>
+        </div>
+        <p id="orxan"></p>
+        <p id="orxan1"></p>
+        <p id="orxan2"></p>
+
+        <div class="consul">
+          <p>
+            Beləliklə, dırnaqlar arasında olan json mətnini Javascript obyektinə
+            çevirib istifadə edə bilirik. İlk olaraq bütün obyekti konsol
+            üzərində göstəririk. Konsolda bütün obyektin göstərildiyini görə
+            bilərsiniz. Sonra isə obyektin ad elementini brauzerdə çap edirik.
+          </p>
+        </div>
+
+        <div class="consul-img">
+          <figure>
+            <img src="./img/Picture6.png" alt="" />
+            <figcaption>
+              <p>Şəkil 1. Bütün obyekti konsol üzərində göstəririk</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="netice">
+          <p>
+            Yuxarıda yazdığımız kodun əksini də yaza bilərik. Yəni,
+            <span>Javascript obyektini Json</span> yazılışına çevirməyimiz
+            mümkündür. Bunun üçün <span> Json.stringify() funksiyasından </span>
+            istifadə edə bilərik.
+            <br />
+            Nəticədə obyektin <span>Json formatına</span> çevrilərək mətn kimi
+            yazıldığını görəcəyik.
+          </p>
+        </div>
+        <p id="box"></p>
+        <div class="proqram">
+          <p>
+            Əlavə olaraq qeyd edək ki,
+            <span>Json proqramlaşdırma dilindən</span> asılı deyil və
+            <span>Jsonla</span> göndərilmiş məlumatlar bütün proqramlaşdırma
+            dilləri tərəfindən istifadə oluna bilər. <span>Json </span>ilə
+            məlumatlar obyekt içində obyekt şəklində də saxlana bilər.
+            <br />
+            Burada artıq bir <span>Json</span> məlumatının içərisində bir neçə
+            şəxsə aid məlumatı saxlaya bilirik. Burada
+            <span>g.person1.name</span> yazaraq birinci şəxsin adını götürmüş
+            oluruq. Əgər, ikinci şəxsin soyadini götürmək istəsək
+            <span>g.person2.soyad</span> yazmalyıq.
+          </p>
+        </div>
+        <div class="pre-div">
+          <pre>
+//Json ilə məlumatlar obyekt içində obyekt şəklində də saxlana bilər.
+            var h = `{
+              "person1":{"name":"Aynure","soyad":"Aliyev"},
+              "person2":{"name":"Resmiyye","soyad":"Merdanli"}
+              }`;
+            var g = JSON.parse(h);
+            //document.write(g.person1.name);
+            //document.write(g.person2.soyad);
+            document.getElementById("ad").innerHTML = g.person1.name;
+            document.getElementById("soyad").innerHTML = g.person2.soyad;
+            </pre
+          >
+        </div>
+        <div class="netice1">
+          <p>Nəticə aşaıidaki kimi olur:</p>
+          <p id="ad"></p>
+          <p id="soyad"></p>
+        </div>
+
+        <div class="coxluq-info">
+          <h1><span>Json </span>daxilində birbaşa çoxluq da yaza bilərik</h1>
+          <p>
+            Burada çoxluq <span>(array)</span> şəklində yazılmış
+            <span>Json</span> mətnini <span>Javascript</span> çoxluğuna çevirib
+            istifadə edə bilirik.
+          </p>
+        </div>
+        <div class="pre-div">
+          <pre>
+                    //Json daxilində birbaşa çoxluq da yaza bilərik.
+                    var n = `["Cemile","Aynure","Ceyran"]`;
+                    var m = JSON.parse(n);
+                    //document.write(m[0]);
+                    document.getElementById("coxluq").innerHTML = m[0];
+                    </pre
+          >
+        </div>
+        <p id="coxluq"></p>
+      </section>
+    </main>
+    <script src="./app/format.js"></script>
+  </body>
+</html>

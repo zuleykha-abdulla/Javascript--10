@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT-10</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./img/logo5.webp" alt="" />
+      </div>
+      <!---navbar statr-->
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Cookies</a></li>
+          <li><a href="local.html">LocalStorage obyekti </a></li>
+          <li><a href="format.html"> Json formatı</a></li>
+        </ul>
+      </nav>
+      <!---navbar finished-->
+      <!-----kecid menyusu -->
+
+      <div id="menu-toggle">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+      <!------------------------ -->
+    </header>
+    <main>
+      <section>
+        <div class="local">
+          <h1>Javascriptdə localStorage obyekti</h1>
+          <p>
+            Javascriptdə localStorage obyekti məlumatı istifadəçinin brauzerində
+            saxlamağa imkan verir. Yadda saxlanılan məlumatın adı və dəyəri olur
+            (key, value). Yazılan məlumatlar istifadəçi komputerini söndürsə
+            belə brauzerin yaddaşında qalır. Həmin məlumatı yaratdığımız kimi
+            silməyimiz də mümkündür. Həmçinin, istifadəçi öz istəyi ilə də
+            brauzerində yadda saxlanılmış məlumatları silə bilər.
+          </p>
+          <div class="pre-div">
+            <pre>
+       
+            localStorage.setItem("name",“Orxan");
+   
+        </pre
+            >
+            <p>
+              Burada «name» məlumat verdiyimiz ad (key), «Orxan» isə məlumatın
+              özüdür (value).
+            </p>
+          </div>
+        </div>
+        <div class="local-img">
+          <figure>
+            <img src="./img/Picture3.png" alt="" />
+            <figcaption>
+              <p>Şəkil 1. Yadda saxlanılan məlumatın görünməsi</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="null">
+          <p>
+            Əgər, qeyd edilən adda məlumat daha öncə yaradılmayıbsa o zaman null
+            dəyəri görünəcək. Bundan istifadə edərək məlumatın daha öncə
+            yaradılıb yaradılmadığını aşağıdakı qaydada yoxlaya bilərik.
+            <br />
+            Yadda saxlanılan məlumatı silmək üçün aşağıdakı kodu yazmalıyıq.
+          </p>
+        </div>
+        <div class="obyekt">
+          <p>
+            İndi isə bu obyektdən istifadə edərək bir nümunə yazaq. Məsələn, hər
+            kəsin zaman-zaman qarşılaşdığı bir problem var. Hər-hansı bir mətni
+            yazırıq və birdən komputer donur və ya hansısa səbəbdən sönür. Belə
+            olduqda yazdığımız mətn də itir. Ancaq localStorage istifadə edərək
+            elə edə bilərik ki, komputer sönsə belə yazılan mətn silinməsin,
+            mətn sahəsinin içərisində qalsın. Bunun üçün ilk olaraq yazılan
+            məlumatı localStorage sahəsinə yazmalıyıq.
+          </p>
+        </div>
+        <textarea id="text"></textarea>
+        <div class="text-img">
+          <figure>
+            <img src="./img/Picture5.png" alt="" />
+            <figcaption>
+              <p>
+                Şəkil 2. Yazılan məlumatı localStorage sahəsinə daxil edilməsi
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+    <script src="./app/local.js"></script>
+  </body>
+</html>

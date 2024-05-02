@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT-10</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./img/logo5.webp" alt="" />
+      </div>
+      <!---navbar statr-->
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Cookies</a></li>
+          <li><a href="local.html">LocalStorage obyekti </a></li>
+          <li><a href="format.html"> Json formatı </a></li>
+        </ul>
+      </nav>
+      <!---navbar finished-->
+      <!-----kecid menyusu -->
+
+      <div id="menu-toggle">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </div>
+      <!------------------------ -->
+    </header>
+    <main>
+      <section>
+        <div class="cook">
+          <h1>Cookies</h1>
+          <p>
+            Çərəzlər, yəni, cookies istifadəçinin brauzerində məlumatların.
+            saxlanılması üçün istifadə olunmaqdadır.
+            <br />
+            Çərəzlərdən istifadə edərək isə həmin məlumatı uzun müddət yaddaşda
+            saxlaya bilərik.
+            <br />
+            Çərəzlərdən istifadə edərək məlumatı brauzerdə yadda saxlamaq üçün
+            <span>document.cookie</span> xüsusiyyətindən istifadə edə bilərik.
+          </p>
+        </div>
+        <!--------------------------------------------------------------------->
+        <div class="cook-img">
+          <figure>
+            <img src="./img/Picture.png" alt="" />
+            <figcaption>
+              <p>
+                Şəkil 1. Məlumatı brauzerdə yadda saxlamaq üçün
+                <span>document.cookie</span> xüsusiyyətinin dialoq pəncərəsi
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+        <!--------------------------------------------------------------------->
+        <div class="picture">
+          <figure>
+            <img src="./img/Picture4.png" alt="" />
+            <figcaption>
+              <p>Şəkil 2. Cookie dəyərləri xüsusiyyətinin dialoq pəncərəsi</p>
+            </figcaption>
+          </figure>
+        </div>
+        <!--------------------------------------------------------------------->
+        <div class="box-info">
+          <input type="text" id="yazi" />
+          <button onclick="yarat();">Cookie yarat</button>
+
+          <button onclick="bax();">Məlumata bax</button>
+        </div>
+        <div class="deyer">
+          <h1>cookie.split</h1>
+          <p>
+            Təkcə adı götürmək üçün isə
+            <span>cookie dəyərini</span> parçalamağımız lazımdır. Bunun üçün
+            <span>cookie dəyərini “;” </span>simvoluna görə bölməli və ilk
+            hissəni götürməliyik
+          </p>
+        </div>
+        <div class="vaxt">
+          <p>
+            Yaratdığımız cookie dəyərini silmək üçün onun bitmə vaxtını keçmiş
+            vaxta yazmağımız kifayətdir.
+            <br />
+            Beləliklə, <span>“name” adlı cooki</span>e dəyərini silmiş oluruq.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./app/script.js"></script>
+  </body>
+</html>
